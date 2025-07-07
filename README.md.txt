@@ -4,13 +4,13 @@ RESTful API for user registration developed as part of the BCI Java Specialist I
 
 ## Technologies Used
 
-- Java 8+
-- Spring Boot 2.7+
+- Java 17
+- Spring Boot
 - Spring Security with JWT
 - Spring Data JPA
-- H2 Database (in-memory)
+- HSQLDB Database (in-memory)
 - Maven
-- JUnit 5
+- JUnit/Mockito
 - Swagger/OpenAPI 3
 
 ## Features
@@ -36,7 +36,7 @@ RESTful API for user registration developed as part of the BCI Java Specialist I
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/bci.git
+git clone https://github.com/cerritosc/bci.git
 cd bci
 
 2. Build the project:
