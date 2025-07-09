@@ -36,9 +36,4 @@ public class UserController {
 	    return ResponseEntity.ok(new UserDTO(user));
 	}
 
-	@PutMapping
-	public ResponseEntity<UserResponse> updateCurrentUser(@AuthenticationPrincipal UserDetails userDetails, @RequestBody UserDTO userDTO) {
-		return ResponseEntity.status(HttpStatus.OK).body(userDetailsService.updateUser(userDetails.getUsername(), userDTO));
-	}
-
 }

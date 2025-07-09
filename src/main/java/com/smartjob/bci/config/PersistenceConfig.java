@@ -26,14 +26,11 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.smartjob.bci.commons.datatables.repository.DataTablesRepositoryFactoryBean;
-
 @Slf4j
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:hibernate.properties")
-@EnableJpaRepositories(repositoryFactoryBeanClass = DataTablesRepositoryFactoryBean.class, basePackages = {"com.smartjob.bci.repository"})
-//@EnableJpaAuditing(auditorAwareRef="auditorProvider") 
+@EnableJpaRepositories(basePackages = {"com.smartjob.bci.repository"}) 
 public class PersistenceConfig {
     private static final Logger LOG = LoggerFactory.getLogger(PersistenceConfig.class);
 
