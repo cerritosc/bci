@@ -17,12 +17,14 @@ import com.smartjob.bci.dto.UserDTO;
 import com.smartjob.bci.dto.UserResponse;
 import com.smartjob.bci.security.service.UserDetailsServiceImpl;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@SecurityRequirement(name = "Bearer Authentication")
 public class UserController {
 
 	@Autowired
